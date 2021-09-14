@@ -10,7 +10,7 @@ This repository contains the template to implement a quick ROS node which perfor
 
 The files included in this repository are:
 
-[to be updated]
+* `src/vision_controller.py`: This is a Python2 program which starts a ROS node that contains an image topic subscriber and a velocity message publisher, structured in such a way that one can code a control strategy in between.  
 
 ## Future
 
