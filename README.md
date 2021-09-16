@@ -6,6 +6,8 @@ This repository contains the template to implement a quick ROS node which perfor
 2. Includes the structure for a controller which can be used to calculate desired positions or velocities.
 3. Publisher to the commanded velocity topic.
 
+Please note that this code repository is **not** a ROS package.
+
 ## Files
 
 The files included in this repository are:
