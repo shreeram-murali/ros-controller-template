@@ -23,7 +23,8 @@ def controller():
     """The code here calculates the velocity to be published based on vision messages."""
 
 
-def callback(data, i):
+def callback(data):
+    global i
     bridge = CvBridge()
     rospy.loginfo("received video frame")
     start = time.time()
@@ -43,6 +44,6 @@ if __name__ == '__main__':
     while not velocity_publisher.get_num_connections(): # Wait till the publisher is fully initialised
         time.sleep(0.5)
         rospy.loginfo('Still waiting for publisher to be initialised') 
-    rospy.Subscriber('/camera/topic', Image, callback, callback_args=i)
+    rospy.Subscriber('/camera/topic', Image, callback)
     rospy.spin()
     cv2.destroyAllWindows()
